@@ -1,0 +1,43 @@
+dimension 3
+units metal
+boundary p p p
+atom_style atomic
+timestep 0.002
+lattice custom 3.628 a1 1.0 0.0 0.0 a2 0.0 1.0 0.0 a3 0.0 0.0 1.0 &
+                     basis 0.0 0.0 0.0 &
+                     basis 0.5 0.5 0.0 &
+                     basis 0.0 0.5 0.5 &
+                     basis 0.5 0.0 0.5
+region myregion block 0 20 0 20 0 40 units lattice
+region myregion2 block 0 20 0 20 10 30 units lattice
+create_box  1 myregion
+create_atoms 1 region myregion2 basis 1 1 basis 2 1 basis 3 1 basis 4 1
+mass 1 63.546
+
+pair_style eam
+pair_coeff 1 1 Cu_u6.eam
+
+dump dump_1 all custom 1000 dump.lammpstrj_melt id type x y z
+thermo_style custom step time temp press vol density
+thermo 10000
+
+velocity all create 2000 1234 dist gaussian mom yes rot yes
+fix 1 all npt temp 2000 2000 0.1 iso 0 0 1
+run 450000
+unfix 1
+
+fix 1 all npt temp 1500 1500 0.1 iso 0 0 1
+run 2500
+unfix 1
+
+
+fix 1 all npt temp 1500 300 0.1 iso 0 0 1
+run 300000
+unfix 1
+
+fix 1 all npt temp 300 300 0.1 iso 0 0 1
+run 2500
+unfix 1
+
+fix 1 all nve
+run 100000
