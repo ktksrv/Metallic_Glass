@@ -3,5 +3,5 @@ This repository contains the code that was used to study metallic glasses by sim
 
 ![image](https://github.com/ktksrv/Metallic_Glass/assets/69420577/fa739e69-5005-4ba7-bb91-3c186870c25d)
 <p align="center">
-_Graphical Abstract_
+Graphical Abstract
 </p>
