@@ -28,7 +28,7 @@ A sudden change in the slope of cummulative bond order change with increasing st
 * **total_disp_steps** - defines the density of mesh in the displacement space of α and β ( higher means finer displacement grid on which stresses will be computed)
 * **iteration** - defines the STZ cluster number of a given size
 * **no_segs** - to track the sudden change in slope, the cummulative bond frequency plot is fitted with a piece wise linear function, the number of segments is defined by this paramter
-* 
+
 This function will give yield stress and strain at zero normal stress as output, that would be used by post-processing codes to compute the Mohr-Coloumb parameter
 
 **NOTE: Some support functions that are used in this section of code, will require functions from the misc.py in the utilities section**
