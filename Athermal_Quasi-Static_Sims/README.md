@@ -9,16 +9,19 @@ This directory contains the code to run Athermal Quasi-Static Simulations on the
 
 The following procedure is implemented using two main functions 
 #### Normal_Stress_Matrix_p(no_atoms,max_alpha,max_beta,total_disp_steps,iteration,total_proc,proc_per_task,current_proc)
-* no_atoms - defines the STZ cluster size
-* max_alpha, max_beta - defines the upper bound of the tunable parameters of the deformation gradient
-* total_disp_steps - defines the density of mesh in the displacement space of α and β ( higher means finer displacement grid on which stresses will be computed)
-* iteration - defines the STZ cluster number
-* total_proc,proc_per_task,current_proc - defines the parameters for leveraging parallel CPU architecture as all the calculations are embarrassingly parallel. 
+* **no_atoms** - defines the STZ cluster size
+* **max_alpha**, max_beta - defines the upper bound of the tunable parameters of the deformation gradient
+* **total_disp_steps** - defines the density of mesh in the displacement space of α and β ( higher means finer displacement grid on which stresses will be computed)
+* **iteration** - defines the STZ cluster number
+* **total_proc,proc_per_task,current_pro**c - defines the parameters for leveraging parallel CPU architecture as all the calculations are embarrassingly parallel. 
 
 The output will be a (total_disp_steps x total_disp_steps) matrix, whose each element represents the normal stress at the given stress state ( defined for that element at a given value of α and β )
 
 #### surface_atoms(initial,no_atoms)
-* initial - define the initial coordinates of the relaxed STZ cluster
-* no_atoms - defines the STZ cluster size
+* **initial** - define the initial coordinates of the relaxed STZ cluster
+* **no_atoms** - defines the STZ cluster size
 
 This OVITO ported code section identifies the IDs of atoms at the surface of the clusters and gives it as the output to be used by the above function
+
+**NOTE: Some support functions that are used in this section of code, will require functions from the misc.py in the utilities section**
+
