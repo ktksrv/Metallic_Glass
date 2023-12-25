@@ -27,7 +27,7 @@ A sudden change in the slope of cummulative bond order change with increasing st
 * **max_alpha, max_beta** - defines the upper bound of the tunable parameters of the deformation gradient
 * **total_disp_steps** - defines the density of mesh in the displacement space of α and β ( higher means finer displacement grid on which stresses will be computed)
 * **iteration** - defines the STZ cluster number of a given size
-* **no_segs** - to track the sudden change in slop, the cummulative bond frequency plot is fitted with a piece wise linear function, the number of segments is defined by this paramter
+* **no_segs** - to track the sudden change in slope, the cummulative bond frequency plot is fitted with a piece wise linear function, the number of segments is defined by this paramter
 * 
 This function will give yield stress and strain at zero normal stress as output, that would be used by post-processing codes to compute the Mohr-Coloumb parameter
 
