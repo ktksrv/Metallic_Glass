@@ -15,7 +15,7 @@ The following procedure is implemented using two main functions
 * **iteration** - defines the STZ cluster number
 * **total_proc,proc_per_task,current_pro**c - defines the parameters for leveraging parallel CPU architecture as all the calculations are embarrassingly parallel. 
 
-After using the merging script (in the ../Utilities directory) to merge the output from various CPUs, the output will be a (total_disp_steps x total_disp_steps) matrix, whose each element represents the normal stress at the given stress state ( defined for that element at a given value of α and β )
+After using the merging script (in the ../Utilities directory) to merge the output from various CPUs, the output will be a (total_disp_steps x total_disp_steps) matrix _X_, whose _X<sub>ij</sub>_ element represents the normal stress at _i<sup>th</sup>_ value of discretized α and j<sup>th</sup> value of discretized β
 
 #### surface_atoms(initial,no_atoms)
 * **initial** - define the initial coordinates of the relaxed STZ cluster
