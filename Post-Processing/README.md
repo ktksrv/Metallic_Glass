@@ -7,7 +7,7 @@ This directory contains code for finding the local Mohr-Coloumb parameter for an
 3. Repeating this process for different normal stresses, we can plot normalized normal stress vs normalized yield shear stress, whose slope yields the local Mohr-Coloumb parameter for the cluster 
 
 The procedure is implemented using,
-#### MC_good_cluster_p_red(no_atoms,max_alpha,max_beta,total_disp_steps,lower,upper,steps,iteration,total_proc,proc_per_task,current_proc,shift)
+##### MC_good_cluster_p_red(no_atoms,max_alpha,max_beta,total_disp_steps,lower,upper,steps,iteration,total_proc,proc_per_task,current_proc,shift)
 * **no_atoms** - defines the STZ cluster size
 * **max_alpha, max_beta** - defines the upper bound of the tunable parameters of the deformation gradient
 * **total_disp_steps** - defines the density of mesh in the displacement space of α and β ( higher means finer displacement grid on which stresses will be computed)
