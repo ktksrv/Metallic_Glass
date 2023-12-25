@@ -14,8 +14,7 @@ The following procedure is implemented using two main functions
 * **total_disp_steps** - defines the density of mesh in the displacement space of α and β ( higher means finer displacement grid on which stresses will be computed)
 * **iteration** - defines the STZ cluster number
 * **total_proc,proc_per_task,current_pro**c - defines the parameters for leveraging parallel CPU architecture as all the calculations are embarrassingly parallel. 
-
-The output will be a (total_disp_steps x total_disp_steps) matrix, whose each element represents the normal stress at the given stress state ( defined for that element at a given value of α and β )
+After using the merging script (in the Utilities directory) to merge the output from various CPU, the output will be a (total_disp_steps x total_disp_steps) matrix, whose each element represents the normal stress at the given stress state ( defined for that element at a given value of α and β )
 
 #### surface_atoms(initial,no_atoms)
 * **initial** - define the initial coordinates of the relaxed STZ cluster
