@@ -21,3 +21,8 @@ The output will be a (total_disp_steps x total_disp_steps) matrix, whose each el
 initial - define the initial coordinates of the relaxed STZ cluster
 no_atoms - defines the STZ cluster size
 This OVITO ported code section identifies the IDs of atoms at the surface of the clusters and gives it as the output to be used by the above function
+
+ Markup : * Bullet list
+              * Nested bullet
+                  * Sub-nested bullet etc
+          * Bullet list item 2
