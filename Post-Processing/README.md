@@ -4,7 +4,8 @@ This directory contains code for finding the local Mohr-Coloumb parameter for an
 ## Method
 1. The iso-normal contour is extracted from the normal stress matrix generated from Athermal Quasi-Static Simulations for a given normal stress
 2. For the strains on the iso-normal contours, shear stress is evaluated and plotted against the shear strain to estimate the yield shear strain using the sudden change in slope of cumulative bond status change parameter
-3. Repeating this process for different normal stresses, we can plot normalized normal stress vs normalized yield shear stress, whose slope yields the local Mohr-Coloumb parameter for the cluster 
+3. Repeating this process for different normal stresses, we can plot normalized normal stress vs normalized yield shear stress, whose slope yields the local Mohr-Coloumb parameter for the cluster
+4. To account for the amorphous nature of metallic glasses, the local MC parameter is calculated for more STZ clusters of the same size and then this data for all the clusters is fitted with a line, whose slope gives the MC parameter for the STZ of a particular size
 
 The procedure is implemented using,
 ##### MC_good_cluster_p_red(no_atoms,max_alpha,max_beta,total_disp_steps,lower,upper,steps,iteration,total_proc,proc_per_task,current_proc,shift)
