@@ -10,7 +10,7 @@ This directory contains the code to run Athermal Quasi-Static Simulations on the
 The following procedure is implemented using two main functions 
 #### Normal_Stress_Matrix_p(no_atoms,max_alpha,max_beta,total_disp_steps,iteration,total_proc,proc_per_task,current_proc)
 * **no_atoms** - defines the STZ cluster size
-* **max_alpha**, max_beta - defines the upper bound of the tunable parameters of the deformation gradient
+* **max_alpha, max_beta** - defines the upper bound of the tunable parameters of the deformation gradient
 * **total_disp_steps** - defines the density of mesh in the displacement space of α and β ( higher means finer displacement grid on which stresses will be computed)
 * **iteration** - defines the STZ cluster number
 * **total_proc,proc_per_task,current_pro**c - defines the parameters for leveraging parallel CPU architecture as all the calculations are embarrassingly parallel. 
