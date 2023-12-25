@@ -13,7 +13,7 @@ The procedure is implemented using,
 * **total_disp_steps** - defines the density of mesh in the displacement space of α and β ( higher means finer displacement grid on which stresses will be computed)
 * **lower, upper, steps** - defines the upper and lower limit of normal stresses and the number of steps in between these limits, where the sampling of specific normal stress will take place
 * **iteration** - defines the STZ cluster number of a given size
-* **total_proc,proc_per_task,current_pro**c - defines the parameters for leveraging parallel CPU architecture as all the calculations are embarrassingly parallel.
+* **total_proc,proc_per_task,current_proc** - defines the parameters for leveraging parallel CPU architecture as all the calculations are embarrassingly parallel.
 * **shift** - defines the gap between two sucessive  large drops in shear stress ( if such a situation arises in a stress-strain plot toggle this parameter to match with bond data)  
 
 
