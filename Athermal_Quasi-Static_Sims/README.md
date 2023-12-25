@@ -12,7 +12,7 @@ The following procedure is implemented using two main functions
 * **no_atoms** - defines the STZ cluster size
 * **max_alpha, max_beta** - defines the upper bound of the tunable parameters of the deformation gradient
 * **total_disp_steps** - defines the density of mesh in the displacement space of α and β ( higher means finer displacement grid on which stresses will be computed)
-* **iteration** - defines the STZ cluster number
+* **iteration** - defines the STZ cluster number of a given size
 * **total_proc,proc_per_task,current_pro**c - defines the parameters for leveraging parallel CPU architecture as all the calculations are embarrassingly parallel. 
 
 After using the merging script (in the ../Utilities directory) to merge the output from various CPUs, the output will be a (total_disp_steps x total_disp_steps) matrix _X_, whose _X<sub>ij</sub>_ element represents the normal stress at _i<sup>th</sup>_ value of discretized α and j<sup>th</sup> value of discretized β
