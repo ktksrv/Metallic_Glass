@@ -16,6 +16,6 @@ The code contains, the bond calculations done for 15 possible bond lengths in Vi
 * **iteration** - defines the STZ cluster number
 * **total_proc,proc_per_task,current_pro**c - defines the parameters for leveraging parallel CPU architecture as all the calculations are embarrassingly parallel. 
 
-After using the merging script (in the ../Utilities directory) to merge the output from various CPUs, the output will be a (no_atoms x (total_disp_steps*total_disp_steps)) matrix _M_, whose _M<sub>ij</sub>_
+After using the merging script (in the ../Utilities directory) to merge the output from various CPUs, the output will be a (no_atoms x (total_disp_steps*total_disp_steps)) matrix _M_, whose _M<sub>ij</sub>_ element represents _i<sup>th</sup>_ atom's nearest neighbor distance with same species or different species at the j<sup>th</sup>_ step of deformation out of total (total_disp_steps*total_disp_steps) steps
 
 
